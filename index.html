@@ -348,7 +348,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
     <a href="#olcum"><span class="n">02</span> Trafik, Impression, Sıralama</a>
     <h4>İçerik</h4>
     <a href="#yeni"><span class="n">03</span> Mevcut ve Yeni İçerik</a>
-    <a href="#kohort"><span class="n">04</span> İki Üretim Kohortu</a>
+    <a href="#uretim"><span class="n">04</span> İki Üretim Kaynağı</a>
     <a href="#icerik"><span class="n">05</span> Kopya &amp; Yapay Zeka Denetimi</a>
     <h4>Teknik</h4>
     <a href="#sitemap"><span class="n">06</span> Sitemap ve Yönlendirmeler</a>
@@ -417,7 +417,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
         <tbody>
           <tr><td>Trafik ve impression uzun süredir aynı seviyede</td><td>Düz değil. Adresin arama görünürlüğü Ocak 2026'da başlamış, Nisan'da <b>17.358</b> click ile zirveye ulaşmış, Temmuz'da <b>9.845</b> seviyesine gerilemiştir (-%43). Panelin düz görünmesi üç sayfanın gösterim şişmesinden kaynaklanmaktadır</td><td class="ctr"><span class="pill p-info">Ölçüm düzeltmesi</span></td></tr>
           <tr><td>Son eklenen yazılar sıralama almıyor</td><td>Doğrulanmıştır. Mayıs sonrası yazı başına 6.1 click; Aralık-Nisan 52.4. Ajans payının düşmesiyle örtüşmektedir</td><td class="ctr"><span class="pill p-neg">Doğrulandı</span></td></tr>
-          <tr><td>Çalışan yazıları bariz yapay zeka üretimi</td><td>Kalıpsallık ölçümünde iki kohort arasında anlamlı fark bulunmamaktadır. Ayrışma konu seçiminde ve arama niyetindedir</td><td class="ctr"><span class="pill p-amber">Kısmen</span></td></tr>
+          <tr><td>Çalışan yazıları bariz yapay zeka üretimi</td><td>Kalıpsallık ölçümünde iki üretim kaynağı arasında anlamlı fark bulunmamaktadır. Ayrışma konu seçiminde ve arama niyetindedir</td><td class="ctr"><span class="pill p-amber">Kısmen</span></td></tr>
           <tr><td>Ajans yazıları kopya ya da tamamen yapay zeka olabilir</td><td>Blog içi örtüşme ve web geneli birebir ifade aramasında kopya bulgusuna rastlanmamıştır</td><td class="ctr"><span class="pill p-pos">Endişe yersiz</span></td></tr>
           <tr><td>Teknik tarama veya indexleme sorunu var mı</td><td>Yaygın engel yok. Beş yazı iç bağlantı almıyor ve indexsiz; iki sitemap birbirini tutmamaktadır</td><td class="ctr"><span class="pill p-amber">Kısmi bulgu</span></td></tr>
           <tr><td>Turkcell otoritesi blogda hissedilmiyor</td><td>Bağlantı tarafında doğrulanmaktadır: /5g/ bloga sıfır bağlantı veriyor. Yazar kutusu mevcut, ancak unvan ve biyografi alanları boş</td><td class="ctr"><span class="pill p-amber">Kısmen</span></td></tr>
@@ -591,27 +591,27 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
 
     <div class="note note--warn">
       <b class="t">Yorumda dikkat edilmesi gereken nokta</b>
-      <p>Temmuz 2026 yazıları ölçüm anında 1 aylıktır ve olgunlaşma süresi tamamlanmamıştır. Kompozisyon yorumu bu döneme değil, 3-4 aylık Nisan ve Mayıs kohortlarında da aynı örüntünün görülmesine dayanmaktadır.</p>
+      <p>Temmuz 2026 yazıları ölçüm anında 1 aylıktır ve olgunlaşma süresi tamamlanmamıştır. Kompozisyon yorumu bu döneme değil, 3-4 aylık Nisan ve Mayıs döneminde de aynı örüntünün görülmesine dayanmaktadır.</p>
     </div>
   </section>
 
   <!-- 04 -->
-  <section class="section" id="kohort">
-    <div class="eyebrow">04 · Kohort</div>
-    <h2>İki üretim kohortunun karşılaştırması</h2>
-    <p class="lead">Kohort ayrımı sayfa üzerindeki yazar imzasına göre yapılmıştır: "Turkcell" imzalı 129 yazı ajans üretimini, 48 farklı çalışan imzalı 67 yazı iç üretimi temsil etmektedir.</p>
+  <section class="section" id="uretim">
+    <div class="eyebrow">04 · Üretim Kaynağı</div>
+    <h2>İki üretim kaynağının karşılaştırması</h2>
+    <p class="lead">Üretim kaynağı ayrımı sayfa üzerindeki yazar imzasına göre yapılmıştır: "Turkcell" imzalı 129 yazı ajans üretimini, 48 farklı çalışan imzalı 67 yazı iç üretimi temsil etmektedir.</p>
 
     <div class="chart-card" style="margin:16px 0">
       <h4>Yazı başına performans</h4>
       <div class="sub">Yazı başına <b>son 28 günlük</b> ortalama click. Çubuk üzerine gelindiğinde 6 aylık toplam da okunabilir.</div>
-      <div class="chart-box" id="chKohort"></div>
+      <div class="chart-box" id="chUretim"></div>
     </div>
 
     <div class="tbar"><span class="sp">
-      <button class="btn" data-copy="tblKohort">Panoya kopyala</button>
-      <button class="btn" data-csv="tblKohort">CSV indir</button></span></div>
+      <button class="btn" data-copy="tblUretim">Panoya kopyala</button>
+      <button class="btn" data-csv="tblUretim">CSV indir</button></span></div>
     <div class="table-wrap">
-      <table id="tblKohort">
+      <table id="tblUretim">
         <thead><tr>
           <th data-sort="str">Ölçüt <span class="arr">↕</span></th>
           <th data-sort="num" class="num">Ajans üretimi (129 yazı) <span class="arr">↕</span></th>
@@ -630,14 +630,14 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
         </tbody>
       </table>
     </div>
-    <div class="srcline"><b>Kaynak:</b> GSC. Son 28 gün: 24 Tem - 20 Ağu 2026. Son 6 ay: Mart - Ağustos 2026 sayfa düzeyi aylık veri. Kapsam <code>www.turkcell.com.tr/blog</code> ile sınırlıdır. Kohort ayrımı sayfa üzerindeki yazar imzasına göre yapılmıştır. Arındırılmış satırlar 4 Mart 2026 tarihli tek günlük kaydı dışarıda bırakmaktadır.</div>
+    <div class="srcline"><b>Kaynak:</b> GSC. Son 28 gün: 24 Tem - 20 Ağu 2026. Son 6 ay: Mart - Ağustos 2026 sayfa düzeyi aylık veri. Kapsam <code>www.turkcell.com.tr/blog</code> ile sınırlıdır. Üretim kaynağı ayrımı sayfa üzerindeki yazar imzasına göre yapılmıştır. Arındırılmış satırlar 4 Mart 2026 tarihli tek günlük kaydı dışarıda bırakmaktadır.</div>
 
     <div class="insight">
       <span class="ar">➔</span> Ham veride son 28 günde ajans içeriği çalışan içeriğinin <b>6.5 katı</b>, son 6 ayda <b>3.2 katı</b> click almaktadır. Son 6 aydaki farkın dar görünmesi tek bir güne dayanmaktadır: çalışan imzalı <span class="key">akıllı ev</span> yazısı 4 Mart 2026'da tek günde <span class="n">6.595</span> click kaydetmiştir; aynı sayfa önceki ve sonraki gün 1'er click almış, o günün tıklama oranı <span class="n">%95</span> seviyesinde ölçülmüştür. Bu kayıt arındırıldığında son 6 ay farkı <b>8.2 kata</b> çıkmakta ve iki pencere aynı yönü göstermektedir.
     </div>
 
     <div class="insight">
-      <span class="ar">➔</span> Uzunluk iki kohortta neredeyse aynıdır; ayrışma <span class="key">konu seçimi</span> ve <span class="term" data-term="Intent">arama niyeti</span> katmanındadır. Ajans içeriği "hotspot nedir", "mbps nedir", "hat resetleme" gibi arama hacmi doğrulanmış ve Turkcell'in hizmet alanıyla örtüşen başlıkları hedeflemektedir. Çalışan imzalı içerik ise "yapay zekada nezaket maskesi", "empati 4.0", "GTA VI neden sadece bir oyun değil" gibi arama talebi sınırlı, düşünce yazısı formatındaki başlıklarda yoğunlaşmaktadır.
+      <span class="ar">➔</span> Uzunluk her iki üretim kaynağında da neredeyse aynıdır; ayrışma <span class="key">konu seçimi</span> ve <span class="term" data-term="Intent">arama niyeti</span> katmanındadır. Ajans içeriği "hotspot nedir", "mbps nedir", "hat resetleme" gibi arama hacmi doğrulanmış ve Turkcell'in hizmet alanıyla örtüşen başlıkları hedeflemektedir. Çalışan imzalı içerik ise "yapay zekada nezaket maskesi", "empati 4.0", "GTA VI neden sadece bir oyun değil" gibi arama talebi sınırlı, düşünce yazısı formatındaki başlıklarda yoğunlaşmaktadır.
     </div>
 
     <div class="note note--info">
@@ -657,14 +657,14 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
         <thead><tr><th style="width:19%">Test</th><th style="width:34%">Yöntem</th><th>Sonuç</th><th style="width:13%" class="ctr">Durum</th></tr></thead>
         <tbody>
           <tr><td>Blog içi örtüşme</td><td>196 yazının gövde metni, 8 kelimelik kayan blok karşılaştırması. İki metnin ortak blok sayısı, kısa olanın blok sayısına oranlanmıştır</td><td>Yalnızca iki çift örtüşüyor; her ikisi de 301 ile birleştirilmiş durumda</td><td class="ctr"><span class="pill p-pos">Temiz</span></td></tr>
-          <tr><td>Web geneli kopya</td><td>Her iki kohorttan seçilen ayırt edici cümlelerin tırnak içinde birebir aratılması</td><td>Test edilen cümlelerin tamamında tek sonuç Turkcell'in kendi sayfası</td><td class="ctr"><span class="pill p-pos">Temiz</span></td></tr>
+          <tr><td>Web geneli kopya</td><td>Her iki üretim kaynağından seçilen ayırt edici cümlelerin tırnak içinde birebir aratılması</td><td>Test edilen cümlelerin tamamında tek sonuç Turkcell'in kendi sayfası</td><td class="ctr"><span class="pill p-pos">Temiz</span></td></tr>
         </tbody>
       </table>
     </div>
     <div class="srcline"><b>Kaynak:</b> canlı sayfa taraması + DataForSEO birebir ifade araması, Ağustos 2026.</div>
 
     <h3>Kalıpsallık ölçümü: ne ölçüldü, nasıl ölçüldü</h3>
-    <p>Büyük dil modelleriyle üretilen Türkçe metinler, insan yazımına kıyasla belirli örüntülerde yoğunlaşma eğilimi göstermektedir. Bu ölçüm, o örüntülerin yoğunluğunu iki kohort arasında karşılaştırmak için kurulmuştur. Yalnızca makale gövdesi kullanılmış, menü, altbilgi ve ilgili yazılar bloğu metinden çıkarılmıştır.</p>
+    <p>Büyük dil modelleriyle üretilen Türkçe metinler, insan yazımına kıyasla belirli örüntülerde yoğunlaşma eğilimi göstermektedir. Bu ölçüm, o örüntülerin yoğunluğunu iki üretim kaynağı arasında karşılaştırmak için kurulmuştur. Yalnızca makale gövdesi kullanılmış, menü, altbilgi ve ilgili yazılar bloğu metinden çıkarılmıştır.</p>
 
     <div class="table-wrap">
       <table>
@@ -701,7 +701,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
     <div class="srcline"><b>Kaynak:</b> canlı sayfa gövde taraması, 24 Ağu 2026. Ajans 129 yazı, çalışan 67 yazı. "Eşiği aşan" sütunu o sinyalde kalıpsal kabul edilen eşiğin ötesinde kalan yazı sayısını gösterir.</div>
 
     <div class="insight">
-      <span class="ar">➔</span> Altı sinyalin dördünde iki kohort birbirine yakındır. Ayrışan iki sinyal <span class="key">cümle değişkenliği</span> ve <span class="key">kelime çeşitliliği</span>dir: ajans yazılarının <span class="n">%34</span>'ü düşük cümle değişkenliği, <span class="n">%31</span>'i düşük kelime çeşitliliği göstermektedir; çalışan tarafında bu oranlar <span class="n">%18</span> ve <span class="n">%12</span>'dir. <b>Kalıpsallık sinyali beklenenin tersine ajans içeriğinde daha belirgindir</b>, ancak fark tek başına bir üretim yöntemi yargısını taşıyacak düzeyde değildir.
+      <span class="ar">➔</span> Altı sinyalin dördünde iki üretim kaynağı birbirine yakındır. Ayrışan iki sinyal <span class="key">cümle değişkenliği</span> ve <span class="key">kelime çeşitliliği</span>dir: ajans yazılarının <span class="n">%34</span>'ü düşük cümle değişkenliği, <span class="n">%31</span>'i düşük kelime çeşitliliği göstermektedir; çalışan tarafında bu oranlar <span class="n">%18</span> ve <span class="n">%12</span>'dir. <b>Kalıpsallık sinyali beklenenin tersine ajans içeriğinde daha belirgindir</b>, ancak fark tek başına bir üretim yöntemi yargısını taşıyacak düzeyde değildir.
     </div>
 
     <h4>Toplam skor dağılımı</h4>
@@ -713,13 +713,13 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
           <tr><td>40 - 55 · orta</td><td class="num">32</td><td class="num">26</td><td class="num">6</td><td>Gözden geçirilebilir bant</td></tr>
           <tr><td>40 altı · kalıpsal değil</td><td class="num">157</td><td class="num">97</td><td class="num">60</td><td>Blogun %80'i bu bantta</td></tr>
         </tbody>
-        <tfoot><tr><td>Medyan skor</td><td class="num">-</td><td class="num">24.2</td><td class="num">24.6</td><td>İki kohort arasında anlamlı fark yok</td></tr></tfoot>
+        <tfoot><tr><td>Medyan skor</td><td class="num">-</td><td class="num">24.2</td><td class="num">24.6</td><td>İki üretim kaynağı arasında anlamlı fark yok</td></tr></tfoot>
       </table>
     </div>
     <div class="srcline"><b>Kaynak:</b> canlı sayfa gövde taraması, 24 Ağu 2026. Skoru 55 üzerinde olan yedi yazı: flush DNS, bağlantınız güvenli değil hatası, akıllı ev, Type-C, repeater, access point ve ping yazılarıdır.</div>
 
     <h4>Sayfa bazında detaylı inceleme</h4>
-    <p>Yukarıdaki iki tablo kohort düzeyinde özet vermektedir. Aynı ölçümün yazı bazındaki dağılımı, her yazının hangi sinyallerde eşiği aştığı ve performans değerleriyle birlikte ayrı bir pencerede incelenebilir.</p>
+    <p>Yukarıdaki iki tablo üretim kaynağı düzeyinde özet vermektedir. Aynı ölçümün yazı bazındaki dağılımı, her yazının hangi sinyallerde eşiği aştığı ve performans değerleriyle birlikte ayrı bir pencerede incelenebilir.</p>
     <div class="ctrlbar">
       <button class="btn pulse" id="openSig" aria-expanded="false" aria-controls="sigPanel">
         <span class="dot"></span><span id="openSigTxt">Sayfa bazında detaylı incelemeyi aç</span>
@@ -737,7 +737,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
           <option value="0">40 altı · kalıpsal değil</option>
         </select>
         <select class="f" id="sdCoh" style="width:auto">
-          <option value="">Tüm kohortlar</option><option value="Ajans">Ajans</option><option value="Çalışan">Çalışan</option>
+          <option value="">Tüm üretim kaynakları</option><option value="Ajans">Ajans</option><option value="Çalışan">Çalışan</option>
         </select>
         <span class="sp">
           <span class="small" id="sdCount" style="align-self:center"></span>
@@ -753,11 +753,11 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
     <div class="note note--ok">
       <b class="t">Değerlendirme</b>
       <p><b>Kopya bulgusuna rastlanmamıştır.</b> Ajans yazıları için duyulan endişeyi veri desteklememektedir; metinler özgündür ve blog içinde mükerrer değildir.</p>
-      <p><b>Bariz yapay zeka ayrımı da veriyle doğrulanmamıştır.</b> İki kohort arasında anlamlı fark bulunmamaktadır. Çalışan yazılarının performans farkı yazım biçiminden değil, arama talebi olmayan konu seçiminden kaynaklanmaktadır.</p>
+      <p><b>Bariz yapay zeka ayrımı da veriyle doğrulanmamıştır.</b> İki üretim kaynağı arasında anlamlı fark bulunmamaktadır. Çalışan yazılarının performans farkı yazım biçiminden değil, arama talebi olmayan konu seçiminden kaynaklanmaktadır.</p>
     </div>
 
     <h3>Özgünlük katmanı</h3>
-    <p>Her iki kohortta da metinler doğrulanabilir dayanaktan yoksundur. Bu, arama motorlarının ve yapay zeka arama yüzeylerinin kaynak seçiminde ayrıştığı katmandır. Ölçüm yalnızca makale gövdesinde yapılmıştır; menü, altbilgi ve ilgili yazılar bloğu sayılmamıştır.</p>
+    <p>Her iki üretim kaynağında da metinler doğrulanabilir dayanaktan yoksundur. Bu, arama motorlarının ve yapay zeka arama yüzeylerinin kaynak seçiminde ayrıştığı katmandır. Ölçüm yalnızca makale gövdesinde yapılmıştır; menü, altbilgi ve ilgili yazılar bloğu sayılmamıştır.</p>
 
     <div class="chart-card" style="margin:14px 0">
       <h4>Özgünlük sinyalleri · eksik olan yazıların oranı</h4>
@@ -788,7 +788,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
     <div class="srcline"><b>Kaynak:</b> canlı sayfa gövde taraması, 24 Ağu 2026. Sosyal medya bağlantıları dış kaynak sayılmamıştır. Metinsel kaynak ibaresi: "kaynak:", "raporuna göre", "araştırmasına göre", "verilerine göre" ve benzerleri.</div>
 
     <div class="insight">
-      <span class="ar">➔</span> Marka adı tarafında iki kohort tam olarak ayrışmaktadır: ajans yazılarının <span class="up">tamamında</span> Turkcell adı gövdede geçerken, çalışan imzalı yazıların <span class="dn">%82</span>'sinde hiç geçmemektedir. Buna karşılık her iki kohortta da dış kaynak bağlantısı ve sayısal veri sınırlıdır. <b>Ajans içeriği markayı metne yerleştirmiş, ancak dayanak katmanını kurmamıştır.</b>
+      <span class="ar">➔</span> Marka adı tarafında iki üretim kaynağı tam olarak ayrışmaktadır: ajans yazılarının <span class="up">tamamında</span> Turkcell adı gövdede geçerken, çalışan imzalı yazıların <span class="dn">%82</span>'sinde hiç geçmemektedir. Buna karşılık her iki üretim kaynağında da dış bağlantı ve sayısal veri sınırlıdır. <b>Ajans içeriği markayı metne yerleştirmiş, ancak dayanak katmanını kurmamıştır.</b>
     </div>
   </section>
 
@@ -1244,7 +1244,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
     <p class="lead">Analizin dayandığı ham veri.</p>
 
     <div class="tbar">
-      <input class="f" id="postSearch" type="search" placeholder="Yazı adı, kohort veya durum ara..." aria-label="Yazılarda ara">
+      <input class="f" id="postSearch" type="search" placeholder="Yazı adı, üretim kaynağı veya durum ara..." aria-label="Yazılarda ara">
       <button class="btn on fbtn" data-fq="">Tümü</button>
       <button class="btn fbtn" data-fq="Ajans">Ajans</button>
       <button class="btn fbtn" data-fq="Çalışan">Çalışan</button>
@@ -1260,7 +1260,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
       <table id="tblPosts" style="min-width:1000px">
         <thead><tr>
           <th data-sort="str">Yazı <span class="arr">↕</span></th>
-          <th data-sort="str">Kohort <span class="arr">↕</span></th>
+          <th data-sort="str">Üretim <span class="arr">↕</span></th>
           <th data-sort="str">Yayın <span class="arr">↕</span></th>
           <th data-sort="num" class="num">Click <span class="arr">↕</span></th>
           <th data-sort="num" class="num">Impression <span class="arr">↕</span></th>
@@ -1283,15 +1283,15 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
       <li><b>Yazı evreni:</b> iki sitemap birleşimi, 10 kategori sayfasının sayfalamalı taraması ve site tarama çıktısındaki canonical listesi birleştirilerek 199 adres oluşturulmuştur. Üçü 301 ile yönlendirildiğinden canlı yazı sayısı 196'dır.</li>
       <li><b>Ölçüm penceresi:</b> GSC 24 Tem - 20 Ağu 2026 (28 gün). Trend serisi 5 Oca - 20 Ağu 2026; bu adres altında arama görünürlüğü 5 Ocak 2026'da başlamaktadır. Ağustos 2026 ayı 20 günlüktür, aylık grafikte kısmi dönemdir.</li>
       <li><b>Kapsam:</b> çalışma yalnızca <code>www.turkcell.com.tr/blog</code> ve alt sayfalarını kapsamaktadır. GSC'de alan adı düzeyindeki property gelecegiyazanlar, lms ve pasajblog alt alan adlarını da içerdiğinden, raporun tüm serileri <code>https://www.turkcell.com.tr/</code> property'si üzerinden ve <code>page contains /blog</code> filtresiyle alınmıştır. Alt alan adları rapor kapsamı dışındadır.</li>
-      <li><b>Tek günlük kayıt:</b> 4 Mart 2026'da <code>/blog/akilli-ev-nedir-akilli-ev-ozellikleri-nelerdir</code> adresi tek günde 6.595 click kaydetmiştir; aynı sayfa önceki ve sonraki gün 1'er click almış, o günün tıklama oranı %95 seviyesinde ölçülmüştür. Mart ayı toplamı ve çalışan kohortunun 6 aylık toplamı bu kaydı içermektedir; kohort yorumu arındırılmış değer üzerinden yapılmıştır. 196 yazının taranmasında bu ölçekte başka bir tek günlük kayda rastlanmamıştır.</li>
+      <li><b>Tek günlük kayıt:</b> 4 Mart 2026'da <code>/blog/akilli-ev-nedir-akilli-ev-ozellikleri-nelerdir</code> adresi tek günde 6.595 click kaydetmiştir; aynı sayfa önceki ve sonraki gün 1'er click almış, o günün tıklama oranı %95 seviyesinde ölçülmüştür. Mart ayı toplamı ve çalışan imzalı içeriğin 6 aylık toplamı bu kaydı içermektedir; üretim kaynağı yorumu arındırılmış değer üzerinden yapılmıştır. 196 yazının taranmasında bu ölçekte başka bir tek günlük kayda rastlanmamıştır.</li>
       <li><b>Durum kodu ölçümü</b> yönlendirme takip edilmeden yapılmıştır. Sunucu HEAD yöntemine 405 döndüğünden GET kullanılmıştır.</li>
       <li><b>Yayın tarihi:</b> sayfa yapısal verisindeki <code>datePublished</code> alanından alınmıştır. Aralık 2025'te toplu bir tarih bulunmaktadır; bu döneme ait tarihler taşıma kaynaklı olabilir.</li>
-      <li><b>Olgunlaşma etkisi:</b> Temmuz ve Ağustos 2026 yazıları 1-2 aylıktır. Kompozisyon yorumu 3-4 aylık Nisan-Mayıs kohortunda da aynı örüntünün görülmesine dayanmaktadır.</li>
+      <li><b>Olgunlaşma etkisi:</b> Temmuz ve Ağustos 2026 yazıları 1-2 aylıktır. Kompozisyon yorumu 3-4 aylık Nisan-Mayıs döneminde de aynı örüntünün görülmesine dayanmaktadır.</li>
       <li><b>Gövde ölçümleri</b> yalnızca makale gövdesi bileşeninden alınmıştır; menü, altbilgi ve ilgili yazılar bloğu dışarıda bırakılmıştır.</li>
       <li><b>Kopya denetimi</b> blog içinde 196 yazının tamamında, web genelinde ise seçilen cümlelerle sınırlı olarak yapılmıştır.</li>
       <li><b>Hız ölçümü</b> Lighthouse 13.4.0 ile mobil emülasyonda (412x823, 4x CPU yavaşlatma, 1.6 Mbps) iki temsili sayfada yapılmıştır. Gerçek kullanıcı alan verisi (CrUX) bu çalışmada alınamamıştır; laboratuvar ölçümü gerçek kullanıcı deneyimiyle birebir örtüşmeyebilir.</li>
       <li><b>Teknik tarama</b> 196 yazının tamamında sunucu yanıtı üzerinden yapılmıştır. İlk turda eşzamanlı istek sayısı yüksek tutulduğu için 82 adres eksik yanıt döndürmüş; ölçüm düşük eşzamanlılıkla tekrarlanıp doğrulanmıştır.</li>
-      <li><b>Ahrefs trafik değerleri</b> tahmindir ve GSC click değerleriyle birebir örtüşmez; kohort karşılaştırmasında GSC esas alınmıştır.</li>
+      <li><b>Ahrefs trafik değerleri</b> tahmindir ve GSC click değerleriyle birebir örtüşmez; üretim kaynağı karşılaştırmasında GSC esas alınmıştır.</li>
     </ul>
 
     <h3>Verilerin alındığı kaynaklar</h3>
@@ -1680,7 +1680,7 @@ doughnut('chClk',{aria:'Click dağılımı',unit:'Click',
       +`<span class="r"><span>Sıfır click alan</span><b>${sifir[i]}</b></span>`
       +`<span class="r"><span><i style="background:${C.coral}"></i>Ajans payı</span><b>%${ajans[i]}</b></span>`});
 })();
-hbarChart('chKohort',{aria:'Kohort karşılaştırması',l:215,rowH:44,
+hbarChart('chUretim',{aria:'Üretim kaynağı karşılaştırması',l:215,rowH:44,
   labels:['Ajans üretimi · 129 yazı','Çalışan imzalı · 67 yazı'],
   data:[61.5,9.4],colors:[C.navy,C.cyan],valFmt:v=>v.toFixed(1)+' click/yazı',
   tip:i=>{const d=[{c:'7.930',p:'%92.6',m:11,az:'%37'},{c:'631',p:'%7.4',m:2,az:'%68'}][i];
@@ -1791,7 +1791,7 @@ document.getElementById('tbSignal').innerHTML=SIGNALS.map(r=>
   const posPill=v=>v==null?'-':`<span class="pill ${v<=5?'p-pos':(v<=10?'p-amber':'p-gray')}">${v.toFixed(1)}</span>`;
   function render(){
     if(st.view==='total'){
-      head.innerHTML=`<tr><th data-sort="str">Yazı ${arr}</th><th data-sort="str">Kohort ${arr}</th>
+      head.innerHTML=`<tr><th data-sort="str">Yazı ${arr}</th><th data-sort="str">Üretim ${arr}</th>
         <th data-sort="str">Top keyword ${arr}</th><th data-sort="num" class="num">Top kw sırası ${arr}</th>
         <th data-sort="num" class="num">Click ${arr}</th><th data-sort="num" class="num">Impression ${arr}</th>
         <th data-sort="num" class="num">Ort. sıralama ${arr}</th></tr>`;
@@ -1804,7 +1804,7 @@ document.getElementById('tbSignal').innerHTML=SIGNALS.map(r=>
       src.innerHTML='<b>Kaynak:</b> GSC sayfa düzeyi aylık veri, Mart - Ağustos 2026 (6 ay). Ortalama sıralama gösterim ağırlıklıdır. Top keyword ve sırası son 90 günün en çok tıklanan sorgusundan alınmıştır; 42 yazının sorgu verisi bulunmadığından "-" görünür.';
     } else {
       const M=MONTHS, mn={c:'Click',i:'Impression',p:'Sıralama'}[st.metric];
-      head.innerHTML=`<tr><th data-sort="str">Yazı ${arr}</th><th data-sort="str">Kohort ${arr}</th>`
+      head.innerHTML=`<tr><th data-sort="str">Yazı ${arr}</th><th data-sort="str">Üretim ${arr}</th>`
         +M.map(m=>`<th data-sort="num" class="num">${AY[m]} ${arr}</th>`).join('')
         +`<th data-sort="num" class="num">Değişim ${arr}</th></tr>`;
       const idx={c:0,i:1,p:2}[st.metric];
@@ -1867,7 +1867,7 @@ document.getElementById('tbSignal').innerHTML=SIGNALS.map(r=>
   const arr='<span class="arr">↕</span>';
   head.innerHTML=`<tr>
     <th data-sort="str">Yazı ${arr}</th>
-    <th data-sort="str">Kohort ${arr}</th>
+    <th data-sort="str">Üretim ${arr}</th>
     <th data-sort="str">Yayın ${arr}</th>
     <th data-sort="num" class="num">Skor ${arr}</th>
     <th data-sort="str">Bant ${arr}</th>

@@ -16,7 +16,7 @@ turkcell.com.tr/blog ve alt yazılarının tarama, indexleme, içerik, teknik SE
 | **Durum** | 01 | Yönetici özeti |
 | | 02 | Trafik, impression ve sıralama incelemesi |
 | **İçerik** | 03 | Mevcut ve yeni içerik |
-| | 04 | İki üretim kohortu |
+| | 04 | İki üretim kaynağı |
 | | 05 | Kopya ve yapay zeka denetimi |
 | **Teknik** | 06 | Sitemap ve yönlendirmeler |
 | | 07 | Tarama ve indexleme |
@@ -32,7 +32,7 @@ turkcell.com.tr/blog ve alt yazılarının tarama, indexleme, içerik, teknik SE
 
 - **Grafikler:** üzerine gelindiğinde metrikler okunur. Trend grafiğinde click, impression ve sıralama serileri ayrı ayrı açılıp kapanır; 15 günlük ve aylık gösterim arasında geçiş yapılabilir.
 - **Tablolar:** sütun başlığından sıralanır, panoya kopyalanır (elektronik tabloya doğrudan yapışır) ve CSV olarak indirilir.
-- **İçerik performansı:** toplam ve aylık değişim görünümü, yayın ayı ve kohort filtresi, arama.
+- **İçerik performansı:** toplam ve aylık değişim görünümü, yayın ayı ve üretim kaynağı filtresi, arama.
 - **Sayfa bazında sinyal incelemesi:** 196 yazının kalıpsallık skoru ve altı sinyali, rapor içinde açılır kapanır panelde.
 - **Terimler:** üzerine gelindiğinde tanımları görünür.
 
