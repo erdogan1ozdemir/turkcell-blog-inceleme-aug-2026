@@ -43,7 +43,8 @@ img{max-width:100%;display:block}
 
 .layout{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:250px 1fr;gap:24px;padding:24px 22px 80px}
 .sidenav{position:sticky;top:74px;align-self:start;height:fit-content;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:13px;box-shadow:0 12px 34px rgba(16,35,63,.12),0 3px 8px rgba(16,35,63,.06);z-index:1}
-.sidenav h4{font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin:2px 8px 9px}
+.sidenav h4{font-size:.63rem;text-transform:uppercase;letter-spacing:.11em;color:var(--ink-3);margin:14px 8px 6px;padding-top:9px;border-top:1px solid var(--line-soft)}
+.sidenav h4:first-child{margin-top:2px;padding-top:0;border-top:none}
 .sidenav a{display:flex;align-items:center;gap:9px;padding:7px 11px;border-radius:10px;color:var(--ink-2);font-size:.83rem;font-weight:600;transition:.15s}
 .sidenav a:hover{background:var(--surface-2);color:var(--navy);text-decoration:none}
 .sidenav a.active{background:var(--blue-soft);color:var(--navy)}
@@ -199,26 +200,40 @@ code{background:var(--surface-3);padding:1px 6px;border-radius:5px;font-size:.85
   border-radius:var(--r-sm);padding:10px 13px;margin-top:12px;line-height:1.6}
 .chartnote b{color:var(--navy)}
 select.f{font-family:inherit;background:var(--surface);cursor:pointer}
-.sigwrap{position:fixed;inset:0;z-index:400;background:rgba(8,18,40,.72);display:none;padding:26px}
-.sigwrap.open{display:block}
-.sigbox{background:var(--bg);max-width:1400px;margin:0 auto;height:100%;border-radius:var(--r-lg);
-  box-shadow:var(--shadow-pop);display:flex;flex-direction:column;overflow:hidden}
-.sighead{padding:16px 22px;border-bottom:1px solid var(--line);background:var(--surface);
-  display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.sighead h3{margin:0;font-size:1.1rem}
-.sighead .x{margin-left:auto;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--ink-3);line-height:1;padding:0 6px}
-.sighead .x:hover{color:var(--navy)}
-.sigbody{overflow:auto;padding:0 22px 22px}
-.sigbody table{min-width:1180px;font-size:.82rem}
-.sigbody thead th{position:sticky;top:0;z-index:2}
-.hit{display:inline-block;min-width:34px;text-align:center;font-weight:700;padding:2px 7px;border-radius:5px}
+.btn.pulse{background:var(--navy);color:#fff;border-color:transparent;padding:10px 18px;font-size:.86rem;
+  position:relative;box-shadow:0 0 0 0 rgba(255,107,91,.55);animation:pulseBtn 2.2s ease-out infinite}
+.btn.pulse:hover{background:var(--navy-deep);color:#fff}
+.btn.pulse .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);display:inline-block;flex:none}
+.btn.pulse.open{animation:none;background:var(--surface);color:var(--navy);border-color:var(--line);box-shadow:none}
+.btn.pulse.open .dot{background:var(--green)}
+@keyframes pulseBtn{
+  0%{box-shadow:0 0 0 0 rgba(255,107,91,.5)}
+  60%{box-shadow:0 0 0 12px rgba(255,107,91,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,107,91,0)}}
+@media(prefers-reduced-motion:reduce){.btn.pulse{animation:none;box-shadow:0 0 0 3px rgba(255,107,91,.28)}}
+
+.sigpanel{border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface);
+  box-shadow:var(--shadow);margin-top:14px;overflow:hidden}
+.sigpanel[hidden]{display:none}
+.sigpanel__bar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:13px 15px;
+  border-bottom:1px solid var(--line);background:var(--surface-2)}
+.sigpanel__bar .sp{margin-left:auto;display:flex;gap:7px;flex-wrap:wrap}
+.sigpanel__scroll{max-height:620px;overflow:auto}
+.sigpanel__scroll .table-wrap{border:none;border-radius:0;box-shadow:none;margin:0;overflow:visible}
+.sigpanel__scroll table{min-width:1180px;font-size:.82rem;table-layout:fixed}
+.sigpanel__scroll{overflow:auto}
+.sigpanel__scroll thead th{position:sticky;top:0;z-index:3;padding:10px 9px;font-size:.76rem;white-space:normal;line-height:1.3}
+.sigpanel__scroll tbody td{padding:9px 9px}
+.sigpanel__scroll .srcline{border-radius:0;border-left:none;border-right:none;border-bottom:none}
+#tblSigDetail td,#tblSigDetail th{white-space:nowrap}
+#tblSigDetail td:first-child{white-space:normal;overflow-wrap:anywhere;word-break:normal;line-height:1.45;padding-right:10px}
+.hit{display:inline-block;min-width:38px;text-align:center;font-weight:700;padding:3px 8px;border-radius:5px}
 .hit-y{background:var(--red-soft);color:#8a201a}
 .hit-n{background:var(--surface-2);color:var(--ink-3)}
 .band{padding:3px 9px;border-radius:var(--r-sm);font-size:.72rem;font-weight:700;white-space:nowrap}
 .band-2{background:var(--red-soft);color:#8a201a}
 .band-1{background:var(--amber-soft);color:#7a4d05}
 .band-0{background:var(--green-soft);color:#145232}
-@media(max-width:760px){.sigwrap{padding:0}.sigbox{border-radius:0}}
 .toc-fab{display:none}.toc-sheet{display:none}
 @media(max-width:980px){
   .layout{grid-template-columns:1fr;padding:16px 14px 90px}
@@ -231,6 +246,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
   .toc-sheet.open{display:flex}
   .toc-sheet__in{background:var(--surface);width:100%;max-height:76vh;overflow:auto;border-radius:18px 18px 0 0;padding:16px 14px 26px}
   .toc-sheet__in h4{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin:0 8px 10px}
+  .toc-sheet__in h4{margin-top:14px}
   .toc-sheet a{display:flex;align-items:center;gap:9px;padding:10px 11px;border-radius:10px;color:var(--ink-2);font-size:.9rem;font-weight:600}
   .toc-sheet a .n{width:22px;height:22px;border-radius:6px;background:var(--surface-2);color:var(--ink-3);font-size:.66rem;font-weight:800;display:grid;place-items:center;flex:none}
 }
@@ -254,19 +270,24 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
 
 <div class="layout">
   <nav class="sidenav" id="sidenav">
-    <h4>Bölümler</h4>
+    <h4>Durum</h4>
     <a href="#ozet"><span class="n">01</span> Yönetici Özeti</a>
-    <a href="#olcum"><span class="n">02</span> Trafik, Impression ve Sıralama</a>
-    <a href="#yeni"><span class="n">03</span> Son Dönem Yazıları</a>
+    <a href="#olcum"><span class="n">02</span> Trafik, Impression, Sıralama</a>
+    <h4>İçerik</h4>
+    <a href="#yeni"><span class="n">03</span> Mevcut ve Yeni İçerik</a>
     <a href="#kohort"><span class="n">04</span> İki Üretim Kohortu</a>
     <a href="#icerik"><span class="n">05</span> Kopya &amp; Yapay Zeka Denetimi</a>
-    <a href="#sitemap"><span class="n">06</span> Sitemap ve Yönlendirme</a>
+    <h4>Teknik</h4>
+    <a href="#sitemap"><span class="n">06</span> Sitemap ve Yönlendirmeler</a>
     <a href="#index"><span class="n">07</span> Tarama &amp; İndexleme</a>
-    <a href="#teknik"><span class="n">08</span> Teknik SEO &amp; Sayfa Hızı</a>
-    <a href="#otorite"><span class="n">09</span> Otorite &amp; E-E-A-T</a>
-    <a href="#canonical"><span class="n">10</span> 5G Canonical Kararı</a>
+    <a href="#canonical"><span class="n">08</span> 5G Canonical Kararı</a>
+    <a href="#teknik"><span class="n">09</span> Teknik SEO &amp; Sayfa Hızı</a>
+    <h4>Otorite</h4>
+    <a href="#otorite"><span class="n">10</span> Otorite &amp; E-E-A-T</a>
     <a href="#algi"><span class="n">11</span> Dış Algı ve Bahsedilme</a>
+    <h4>Sonuç</h4>
     <a href="#aksiyon"><span class="n">12</span> Aksiyon Planı</a>
+    <h4>Ek</h4>
     <a href="#tumyazi"><span class="n">13</span> Tüm Yazılar (196)</a>
     <a href="#yontem"><span class="n">14</span> Yöntem &amp; Sözlük</a>
   </nav>
@@ -625,12 +646,32 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
     <h4>Sayfa bazında detaylı inceleme</h4>
     <p>Yukarıdaki iki tablo kohort düzeyinde özet vermektedir. Aynı ölçümün yazı bazındaki dağılımı, her yazının hangi sinyallerde eşiği aştığı ve performans değerleriyle birlikte ayrı bir pencerede incelenebilir.</p>
     <div class="ctrlbar">
-      <button class="btn on" id="openSig" style="padding:9px 16px">Sayfa bazında detaylı inceleme</button>
-      <button class="btn" data-copy="tblSigDetail">Panoya kopyala</button>
-      <button class="btn" data-csv="tblSigDetail">CSV indir</button>
+      <button class="btn pulse" id="openSig" aria-expanded="false" aria-controls="sigPanel">
+        <span class="dot"></span><span id="openSigTxt">Sayfa bazında detaylı incelemeyi aç</span>
+      </button>
       <span class="small" style="align-self:center">196 yazı · 6 sinyal · skor ve eşik kırılımı</span>
     </div>
-    <table id="tblSigDetail" style="display:none"><thead id="sdHead"></thead><tbody id="sdBody"></tbody></table>
+
+    <div class="sigpanel" id="sigPanel" hidden>
+      <div class="sigpanel__bar">
+        <input class="f" id="sdSearch" type="search" placeholder="Yazı ara..." style="width:190px">
+        <select class="f" id="sdBand" style="width:auto">
+          <option value="">Tüm skor bantları</option>
+          <option value="2">55 ve üzeri · belirgin kalıpsal</option>
+          <option value="1">40 - 55 · orta</option>
+          <option value="0">40 altı · kalıpsal değil</option>
+        </select>
+        <select class="f" id="sdCoh" style="width:auto">
+          <option value="">Tüm kohortlar</option><option value="Ajans">Ajans</option><option value="Çalışan">Çalışan</option>
+        </select>
+        <span class="sp">
+          <span class="small" id="sdCount" style="align-self:center"></span>
+          <button class="btn" data-copy="tblSigDetail">Panoya kopyala</button>
+          <button class="btn" data-csv="tblSigDetail">CSV indir</button>
+        </span>
+      </div>
+      <div class="sigpanel__scroll"><div id="sdMount"></div></div>
+    </div>
 
 
 
@@ -716,7 +757,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
 
   <!-- 07 -->
   <section class="section" id="index">
-    <div class="eyebrow">07 · Tarama &amp; İndexleme</div>
+    <div class="eyebrow">07 · Tarama & İndexleme</div>
     <h2>Yaygın engel yok, ancak bir küme hiç taranmamış</h2>
     <p class="lead">Blog genelinde indexlemeyi engelleyen bir yapılandırma bulunmamaktadır. Buna karşılık iç bağlantı almayan beş yazı Google tarafından hiç taranmamıştır.</p>
 
@@ -789,9 +830,77 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
     </div>
   </section>
 
-  <!-- 08 -->
+  <!-- 09 -->
+  <section class="section" id="canonical">
+    <div class="eyebrow">08 · Canonical Kararı</div>
+    <h2>5G yazıları self-canonical yapılmalı mı?</h2>
+    <p class="lead">Kısa yanıt: büyük bölümü için evet.</p>
+
+    <h3>Bulgu 1 · Google canonical'ı tutarsız uyguluyor</h3>
+    <p>26 5G yazısının tamamı GSC URL Denetimi ile tek tek kontrol edilmiştir. Google, dört yazıda canonical etiketini yok sayıp yazıyı ayrıca indexlemiş, 22 yazıda etiketi uygulamıştır.</p>
+
+    <div class="tbar"><span class="small">Google'ın seçtiği canonical sütunu ayrıştırıcıdır</span><span class="sp">
+      <button class="btn" data-copy="tbl5g">Panoya kopyala</button>
+      <button class="btn" data-csv="tbl5g">CSV indir</button></span></div>
+    <div class="table-wrap">
+      <table id="tbl5g">
+        <thead><tr>
+          <th data-sort="str">Yazı <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">Click <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">Impression <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">Kelime <span class="arr">↕</span></th>
+          <th data-sort="str">Google'ın seçtiği canonical <span class="arr">↕</span></th>
+        </tr></thead>
+        <tbody id="tb5g"></tbody>
+      </table>
+    </div>
+    <div class="srcline"><b>Kaynak:</b> GSC URL Denetimi (26 adresin tamamı) + GSC performans, 24 Ağu 2026. Sizin etiketiniz her adreste <code>/5g/</code> adresini göstermektedir.</div>
+
+    <div class="insight">
+      <span class="ar">➔</span> Google, <span class="term" data-term="Canonical">canonical</span> etiketini <span class="key">yönerge değil ipucu</span> olarak değerlendirmektedir. İçerik yeterince farklı olduğunda etiketi yok sayıp yazıyı ayrıca indexlemektedir. Sonuç, öngörülemeyen bir ara durumdur: dört yazı trafik alırken 22'si görünmez kalmaktadır.
+    </div>
+
+    <h3>Bulgu 2 · /5g/ sayfası bilgi amaçlı sorgularda yarışmıyor</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>/5g/ sayfasının kazandığı sorgular</th><th class="num">Click</th><th class="num">Sıralama</th><th class="ctr">Niyet</th></tr></thead>
+        <tbody>
+          <tr><td>5g</td><td class="num">276</td><td class="num">4.0</td><td class="ctr"><span class="pill p-gray">Karma</span></td></tr>
+          <tr><td>turkcell 5g</td><td class="num">240</td><td class="num">2.4</td><td class="ctr"><span class="pill p-info">Marka</span></td></tr>
+          <tr><td>turkcell 5g hediye</td><td class="num">114</td><td class="num">3.0</td><td class="ctr"><span class="pill p-amber">Ticari</span></td></tr>
+          <tr><td>5g ye nasıl geçilir</td><td class="num">76</td><td class="num">4.0</td><td class="ctr"><span class="pill p-pos">İşlemsel</span></td></tr>
+          <tr><td>turkcell 5g açma</td><td class="num">72</td><td class="num">1.8</td><td class="ctr"><span class="pill p-pos">İşlemsel</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="srcline"><b>Kaynak:</b> GSC, <code>/5g/</code> sayfası sorgu kırılımı, son 90 gün. Sayfanın ilk 20 sorgusunun tamamı marka, ticari veya işlemsel niyetlidir.</div>
+
+    <div class="insight">
+      <span class="ar">➔</span> <code>/5g/</code> sayfası "5g nedir" sorgusunda <b>3. organik sırada</b> ve <span class="term" data-term="AI Overview">AI Overview</span> kaynağı olarak yer almaktadır; bu tanım sorgusunu halihazırda kazanmaktadır. Buna karşılık "network slicing", "edge computing", "5G tarım" gibi uzun kuyruk bilgi sorgularında görünmemektedir. Gerçek bir <span class="term" data-term="Cannibalization">cannibalization</span> riski yalnızca tanım sorgusunda mevcuttur.
+    </div>
+
+    <h3>Önerilen canonical kararı</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th style="width:24%">Grup</th><th class="num">Yazı</th><th style="width:26%">Örnek</th><th>Öneri</th></tr></thead>
+        <tbody>
+          <tr><td>Konusu <code>/5g/</code> ile örtüşmeyen bilgi içeriği</td><td class="num">~24</td><td>network slicing, edge computing, ping düşürme, 5G tarım, 5G eğitim</td><td><b>Self-canonical yapılabilir.</b> Ayrıca <code>/5g/</code> sayfasına yönlendiren bağlam içi bağlantı eklenmesi önerilir</td></tr>
+          <tr><td>Tanım sorgusuyla doğrudan çakışan içerik</td><td class="num">~2</td><td><span class="slug">5g-ve-4g-arasindaki-farklar</span></td><td>Mevcut canonical korunabilir ya da içeriği <code>/5g/</code> sayfasına birleştirilebilir</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="srcline"><b>Karar kuralı:</b> yazının hedef sorgusu <code>/5g/</code> sayfasının GSC sorgu profiliyle örtüşüyorsa canonical korunur; örtüşmüyorsa self-canonical yapılır.</div>
+
+    <div class="note note--crit">
+      <b class="t">Karar gerekçesi</b>
+      <p>Self-canonical geçişinin en güçlü dayanağı, Google'ın zaten en güçlü içeriği ayrıca indexlemiş olmasıdır. Ping yazısı canonical'a rağmen 28 günde 274 click almakta ve bu süreçte <code>/5g/</code> sayfası "5g" sorgusunda 4.0 sırasını korumaktadır. İki sayfanın aynı anda görünmesi ölçülen bir kayba yol açmamıştır.</p>
+      <p>Geçişin, tüm küme yerine trafik potansiyeli en yüksek 6-8 yazıyla başlatılıp 4-6 hafta izlenmesi, ardından kalanın açılması değerlendirilebilir.</p>
+    </div>
+  </section>
+
+<!-- 08 -->
   <section class="section" id="teknik">
-    <div class="eyebrow">08 · Teknik SEO</div>
+    <div class="eyebrow">09 · Teknik SEO</div>
     <h2>Teknik yapı ve sayfa hızı</h2>
     <p class="lead">196 yazının sunucu yanıtı, HTML yapısı ve kaynak yükleme davranışı ölçülmüş, iki temsili sayfada laboratuvar hız testi yapılmıştır. Sonuç iki katmana ayrılmaktadır: <b>yapı sağlam, hız zayıf.</b></p>
 
@@ -929,7 +1038,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
 
   <!-- 09 -->
   <section class="section" id="otorite">
-    <div class="eyebrow">09 · Otorite</div>
+    <div class="eyebrow">10 · Otorite</div>
     <h2>Otorite ve E-E-A-T durumu</h2>
     <p class="lead">Otorite üç kanaldan taşınır: site içi bağlantı, yazar yetkinliği ve içeriğin markaya özgü dayanağı.</p>
 
@@ -960,75 +1069,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
     </div>
   </section>
 
-  <!-- 09 -->
-  <section class="section" id="canonical">
-    <div class="eyebrow">10 · Canonical Kararı</div>
-    <h2>5G yazıları self-canonical yapılmalı mı?</h2>
-    <p class="lead">Kısa yanıt: büyük bölümü için evet.</p>
-
-    <h3>Bulgu 1 · Google canonical'ı tutarsız uyguluyor</h3>
-    <p>26 5G yazısının tamamı GSC URL Denetimi ile tek tek kontrol edilmiştir. Google, dört yazıda canonical etiketini yok sayıp yazıyı ayrıca indexlemiş, 22 yazıda etiketi uygulamıştır.</p>
-
-    <div class="tbar"><span class="small">Google'ın seçtiği canonical sütunu ayrıştırıcıdır</span><span class="sp">
-      <button class="btn" data-copy="tbl5g">Panoya kopyala</button>
-      <button class="btn" data-csv="tbl5g">CSV indir</button></span></div>
-    <div class="table-wrap">
-      <table id="tbl5g">
-        <thead><tr>
-          <th data-sort="str">Yazı <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Click <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Impression <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Kelime <span class="arr">↕</span></th>
-          <th data-sort="str">Google'ın seçtiği canonical <span class="arr">↕</span></th>
-        </tr></thead>
-        <tbody id="tb5g"></tbody>
-      </table>
-    </div>
-    <div class="srcline"><b>Kaynak:</b> GSC URL Denetimi (26 adresin tamamı) + GSC performans, 24 Ağu 2026. Sizin etiketiniz her adreste <code>/5g/</code> adresini göstermektedir.</div>
-
-    <div class="insight">
-      <span class="ar">➔</span> Google, <span class="term" data-term="Canonical">canonical</span> etiketini <span class="key">yönerge değil ipucu</span> olarak değerlendirmektedir. İçerik yeterince farklı olduğunda etiketi yok sayıp yazıyı ayrıca indexlemektedir. Sonuç, öngörülemeyen bir ara durumdur: dört yazı trafik alırken 22'si görünmez kalmaktadır.
-    </div>
-
-    <h3>Bulgu 2 · /5g/ sayfası bilgi amaçlı sorgularda yarışmıyor</h3>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>/5g/ sayfasının kazandığı sorgular</th><th class="num">Click</th><th class="num">Sıralama</th><th class="ctr">Niyet</th></tr></thead>
-        <tbody>
-          <tr><td>5g</td><td class="num">276</td><td class="num">4.0</td><td class="ctr"><span class="pill p-gray">Karma</span></td></tr>
-          <tr><td>turkcell 5g</td><td class="num">240</td><td class="num">2.4</td><td class="ctr"><span class="pill p-info">Marka</span></td></tr>
-          <tr><td>turkcell 5g hediye</td><td class="num">114</td><td class="num">3.0</td><td class="ctr"><span class="pill p-amber">Ticari</span></td></tr>
-          <tr><td>5g ye nasıl geçilir</td><td class="num">76</td><td class="num">4.0</td><td class="ctr"><span class="pill p-pos">İşlemsel</span></td></tr>
-          <tr><td>turkcell 5g açma</td><td class="num">72</td><td class="num">1.8</td><td class="ctr"><span class="pill p-pos">İşlemsel</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="srcline"><b>Kaynak:</b> GSC, <code>/5g/</code> sayfası sorgu kırılımı, son 90 gün. Sayfanın ilk 20 sorgusunun tamamı marka, ticari veya işlemsel niyetlidir.</div>
-
-    <div class="insight">
-      <span class="ar">➔</span> <code>/5g/</code> sayfası "5g nedir" sorgusunda <b>3. organik sırada</b> ve <span class="term" data-term="AI Overview">AI Overview</span> kaynağı olarak yer almaktadır; bu tanım sorgusunu halihazırda kazanmaktadır. Buna karşılık "network slicing", "edge computing", "5G tarım" gibi uzun kuyruk bilgi sorgularında görünmemektedir. Gerçek bir <span class="term" data-term="Cannibalization">cannibalization</span> riski yalnızca tanım sorgusunda mevcuttur.
-    </div>
-
-    <h3>Önerilen canonical kararı</h3>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th style="width:24%">Grup</th><th class="num">Yazı</th><th style="width:26%">Örnek</th><th>Öneri</th></tr></thead>
-        <tbody>
-          <tr><td>Konusu <code>/5g/</code> ile örtüşmeyen bilgi içeriği</td><td class="num">~24</td><td>network slicing, edge computing, ping düşürme, 5G tarım, 5G eğitim</td><td><b>Self-canonical yapılabilir.</b> Ayrıca <code>/5g/</code> sayfasına yönlendiren bağlam içi bağlantı eklenmesi önerilir</td></tr>
-          <tr><td>Tanım sorgusuyla doğrudan çakışan içerik</td><td class="num">~2</td><td><span class="slug">5g-ve-4g-arasindaki-farklar</span></td><td>Mevcut canonical korunabilir ya da içeriği <code>/5g/</code> sayfasına birleştirilebilir</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="srcline"><b>Karar kuralı:</b> yazının hedef sorgusu <code>/5g/</code> sayfasının GSC sorgu profiliyle örtüşüyorsa canonical korunur; örtüşmüyorsa self-canonical yapılır.</div>
-
-    <div class="note note--crit">
-      <b class="t">Karar gerekçesi</b>
-      <p>Self-canonical geçişinin en güçlü dayanağı, Google'ın zaten en güçlü içeriği ayrıca indexlemiş olmasıdır. Ping yazısı canonical'a rağmen 28 günde 274 click almakta ve bu süreçte <code>/5g/</code> sayfası "5g" sorgusunda 4.0 sırasını korumaktadır. İki sayfanın aynı anda görünmesi ölçülen bir kayba yol açmamıştır.</p>
-      <p>Geçişin, tüm küme yerine trafik potansiyeli en yüksek 6-8 yazıyla başlatılıp 4-6 hafta izlenmesi, ardından kalanın açılması değerlendirilebilir.</p>
-    </div>
-  </section>
-
-  <!-- 10 -->
+    <!-- 10 -->
   <section class="section" id="algi">
     <div class="eyebrow">11 · Dış Algı</div>
     <h2>Blog dışarıda nasıl anılıyor?</h2>
@@ -1200,28 +1241,6 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer}
 
 <button class="toc-fab" id="tocFab" aria-label="İçindekiler">☰</button>
 <div class="toc-sheet" id="tocSheet"><div class="toc-sheet__in"><h4>Bölümler</h4><div id="tocLinks"></div></div></div>
-<div class="sigwrap" id="sigWrap" role="dialog" aria-modal="true" aria-label="Sayfa bazında sinyal incelemesi">
-  <div class="sigbox">
-    <div class="sighead">
-      <h3>Sayfa bazında sinyal incelemesi</h3>
-      <input class="f" id="sdSearch" type="search" placeholder="Yazı ara..." style="width:200px">
-      <select class="f" id="sdBand" style="width:auto">
-        <option value="">Tüm skor bantları</option>
-        <option value="2">55 ve üzeri · belirgin kalıpsal</option>
-        <option value="1">40 - 55 · orta</option>
-        <option value="0">40 altı · kalıpsal değil</option>
-      </select>
-      <select class="f" id="sdCoh" style="width:auto">
-        <option value="">Tüm kohortlar</option><option value="Ajans">Ajans</option><option value="Çalışan">Çalışan</option>
-      </select>
-      <span class="small" id="sdCount"></span>
-      <button class="btn" data-copy="tblSigDetail">Panoya kopyala</button>
-      <button class="btn" data-csv="tblSigDetail">CSV indir</button>
-      <button class="x" id="sigClose" aria-label="Kapat">&times;</button>
-    </div>
-    <div class="sigbody"><div id="sdMount"></div></div>
-  </div>
-</div>
 <div class="toast" id="toast"></div>
 <script>const MONTHLY=[["2025-09", 1807, 122289, 7.5], ["2025-10", 1670, 112572, 6.8], ["2025-11", 1535, 93139, 6.4], ["2025-12", 1565, 78181, 6.3], ["2026-01", 5142, 1164549, 7.1], ["2026-02", 10628, 2074566, 7.5], ["2026-03", 23622, 9283826, 6.5], ["2026-04", 18607, 7310662, 6.3], ["2026-05", 13562, 9271447, 6.6], ["2026-06", 9901, 2989736, 6.9], ["2026-07", 10507, 2439065, 6.8], ["2026-08", 6565, 1482680, 6.9]];
 const HALF=[["2025-09-01", 866, 62294, 8.3], ["2025-09-16", 941, 59995, 6.7], ["2025-10-01", 881, 56921, 6.8], ["2025-10-16", 789, 55651, 6.8], ["2025-11-01", 762, 45735, 6.4], ["2025-11-16", 773, 47404, 6.5], ["2025-12-01", 709, 36175, 6.3], ["2025-12-16", 856, 42006, 6.4], ["2026-01-01", 951, 117221, 6.6], ["2026-01-16", 4191, 1047328, 7.6], ["2026-02-01", 4712, 652028, 7.7], ["2026-02-16", 5916, 1422538, 7.2], ["2026-03-01", 13571, 2739020, 6.8], ["2026-03-16", 10051, 6544806, 6.2], ["2026-04-01", 12064, 4040327, 6.0], ["2026-04-16", 6543, 3270335, 6.6], ["2026-05-01", 6806, 5264129, 6.4], ["2026-05-16", 6756, 4007318, 6.7], ["2026-06-01", 5103, 1649610, 6.9], ["2026-06-16", 4798, 1340126, 6.8], ["2026-07-01", 4988, 1238094, 6.7], ["2026-07-16", 5519, 1200971, 6.8], ["2026-08-01", 4826, 1046692, 6.9], ["2026-08-16", 1739, 435988, 6.9]];
@@ -1293,7 +1312,7 @@ const spy=()=>{let cur=secs[0];for(const s of secs){if(s.getBoundingClientRect()
   navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur.id))};
 addEventListener('scroll',spy,{passive:true});spy();
 (function(){const fab=document.getElementById('tocFab'),sheet=document.getElementById('tocSheet'),links=document.getElementById('tocLinks');
-  links.innerHTML=navLinks.map(a=>a.outerHTML).join('');
+  links.innerHTML=[...document.querySelectorAll('.sidenav h4,.sidenav a')].map(e=>e.outerHTML).join('');
   const close=()=>sheet.classList.remove('open');
   fab.addEventListener('click',()=>sheet.classList.add('open'));
   sheet.addEventListener('click',e=>{if(e.target===sheet)close()});
@@ -1762,9 +1781,9 @@ document.getElementById('tbSignal').innerHTML=SIGNALS.map(r=>
 
 /* ================= sinyal detay tablosu ================= */
 (function(){
-  const mount=document.getElementById('sdMount'), tbl=document.getElementById('tblSigDetail'),
-        head=document.getElementById('sdHead'), body=document.getElementById('sdBody'),
-        wrap=document.getElementById('sigWrap'), cnt=document.getElementById('sdCount');
+  const mount=document.getElementById('sdMount'); if(!mount) return;
+  const head=document.createElement('thead'), body=document.createElement('tbody'),
+        cnt=document.getElementById('sdCount');
   const AYAD={'01':'Oca','02':'Şub','03':'Mar','04':'Nis','05':'May','06':'Haz',
               '07':'Tem','08':'Ağu','09':'Eyl','10':'Eki','11':'Kas','12':'Ara'};
   const trTarih=d=>d?`${d.slice(8,10)} ${AYAD[d.slice(5,7)]} ${d.slice(0,4)}`:'-';
@@ -1790,10 +1809,14 @@ document.getElementById('tbSignal').innerHTML=SIGNALS.map(r=>
     ${r[7].map(f=>`<td class="num"><span class="hit hit-${f[1]?'y':'n'}">${f[0]}</span></td>`).join('')}
     <td class="num">${fmt(r[8])}</td><td class="num">${fmt(r[9])}</td>
     <td class="num">${r[10]!=null?r[10].toFixed(1):'-'}</td><td class="num">${fmt(r[11])}</td></tr>`).join('');
-  // gorunur tabloyu overlay'e tasi
-  const vis=document.createElement('div'); vis.className='table-wrap'; vis.style.marginTop='0';
-  const t2=document.createElement('table'); t2.id='sigTable';
-  t2.appendChild(head); t2.appendChild(body); vis.appendChild(t2); mount.appendChild(vis);
+  // tabloyu panele bagla
+  const vis=document.createElement('div'); vis.className='table-wrap';
+  const t2=document.createElement('table'); t2.id='tblSigDetail';
+  const cg=document.createElement('colgroup');
+  [300,74,92,62,116,84,92,104,98,120,118,96,78,98,92,74].forEach(w=>{
+    const c=document.createElement('col'); c.style.width=w+'px'; cg.appendChild(c);});
+  t2.appendChild(cg); t2.appendChild(head); t2.appendChild(body);
+  vis.appendChild(t2); mount.appendChild(vis);
   const cap=document.createElement('div'); cap.className='srcline';
   cap.innerHTML='<b>Kaynak:</b> canlı sayfa gövde taraması 24 Ağu 2026 (sinyal değerleri) + GSC sayfa düzeyi aylık veri Mart - Ağustos 2026 (click, impression, sıralama). '
    +'Kırmızı hücre o sinyalde eşiğin aşıldığını gösterir. Sütun başlığının üzerine gelindiğinde eşik değeri görünür. '
@@ -1809,26 +1832,18 @@ document.getElementById('tbSignal').innerHTML=SIGNALS.map(r=>
       r.style.display=ok?'':'none';});upd();};
   [f1,f2,f3].forEach(e=>e.addEventListener('input',apply));
   upd();
-  const open=()=>{wrap.classList.add('open');document.body.style.overflow='hidden';};
-  const close=()=>{wrap.classList.remove('open');document.body.style.overflow='';};
-  document.getElementById('openSig').addEventListener('click',()=>{
-    // once yeni pencere denenir; gomulu gorunumde engellenirse tam ekran katman acilir
-    let w=null;
-    try{ w=window.open('','_blank','width=1400,height=900'); }catch(e){ w=null; }
-    if(w&&w.document){
-      const css=[...document.querySelectorAll('style')].map(x=>x.outerHTML).join('');
-      w.document.write('<!doctype html><html lang="tr"><head><meta charset="utf-8">'
-        +'<title>Sayfa bazında sinyal incelemesi · Turkcell Blog</title>'+css
-        +'</head><body style="padding:24px"><h2 style="margin-bottom:6px">Sayfa bazında sinyal incelemesi</h2>'
-        +'<p class="small" style="margin-bottom:14px">196 yazı · 6 sinyal · skor ve eşik kırılımı</p>'
-        +vis.outerHTML+cap.outerHTML+'</body></html>');
-      w.document.close();
-      toast('Detay yeni pencerede açıldı');
-    } else { open(); }
+  const btn=document.getElementById('openSig'), panel=document.getElementById('sigPanel'),
+        txt=document.getElementById('openSigTxt');
+  btn.addEventListener('click',()=>{
+    const acik=!panel.hasAttribute('hidden');
+    if(acik){ panel.setAttribute('hidden','');
+      btn.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+      txt.textContent='Sayfa bazında detaylı incelemeyi aç';
+    } else { panel.removeAttribute('hidden');
+      btn.classList.add('open'); btn.setAttribute('aria-expanded','true');
+      txt.textContent='Detaylı incelemeyi kapat';
+      panel.scrollIntoView({block:'nearest',behavior:'smooth'}); }
   });
-  document.getElementById('sigClose').addEventListener('click',close);
-  wrap.addEventListener('click',e=>{if(e.target===wrap)close();});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&wrap.classList.contains('open'))close();});
 })();
 
 /* ================= içerik tablosu: ay filtresi ================= */

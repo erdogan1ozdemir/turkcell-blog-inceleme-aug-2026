@@ -11,29 +11,29 @@ turkcell.com.tr/blog ve alt yazılarının tarama, indexleme, içerik, teknik SE
 
 ## Bölümler
 
-| # | Bölüm |
-|---|---|
-| 01 | Yönetici özeti |
-| 02 | Trafik, impression ve sıralama incelemesi |
-| 03 | Mevcut ve yeni içerik |
-| 04 | İki üretim kohortu |
-| 05 | Kopya ve yapay zeka denetimi |
-| 06 | Sitemap ve yönlendirmeler |
-| 07 | Tarama ve indexleme |
-| 08 | Teknik SEO ve sayfa hızı |
-| 09 | Otorite ve E-E-A-T |
-| 10 | 5G canonical kararı |
-| 11 | Dış algı ve bahsedilme |
-| 12 | Önceliklendirilmiş aksiyon planı |
-| 13 | Tüm yazılar (196) |
-| 14 | Yöntem ve terim sözlüğü |
+| Grup | # | Bölüm |
+|---|---|---|
+| **Durum** | 01 | Yönetici özeti |
+| | 02 | Trafik, impression ve sıralama incelemesi |
+| **İçerik** | 03 | Mevcut ve yeni içerik |
+| | 04 | İki üretim kohortu |
+| | 05 | Kopya ve yapay zeka denetimi |
+| **Teknik** | 06 | Sitemap ve yönlendirmeler |
+| | 07 | Tarama ve indexleme |
+| | 08 | 5G canonical kararı |
+| | 09 | Teknik SEO ve sayfa hızı |
+| **Otorite** | 10 | Otorite ve E-E-A-T |
+| | 11 | Dış algı ve bahsedilme |
+| **Sonuç** | 12 | Önceliklendirilmiş aksiyon planı |
+| **Ek** | 13 | Tüm yazılar (196) |
+| | 14 | Yöntem ve terim sözlüğü |
 
 ## Etkileşim
 
 - **Grafikler:** üzerine gelindiğinde metrikler okunur. Trend grafiğinde click, impression ve sıralama serileri ayrı ayrı açılıp kapanır; 15 günlük ve aylık gösterim arasında geçiş yapılabilir.
 - **Tablolar:** sütun başlığından sıralanır, panoya kopyalanır (elektronik tabloya doğrudan yapışır) ve CSV olarak indirilir.
 - **İçerik performansı:** toplam ve aylık değişim görünümü, yayın ayı ve kohort filtresi, arama.
-- **Sayfa bazında sinyal incelemesi:** 196 yazının kalıpsallık skoru ve altı sinyali, ayrı pencerede.
+- **Sayfa bazında sinyal incelemesi:** 196 yazının kalıpsallık skoru ve altı sinyali, rapor içinde açılır kapanır panelde.
 - **Terimler:** üzerine gelindiğinde tanımları görünür.
 
 Grafikler dış bağımlılık olmadan sayfa içinde SVG olarak üretilmektedir.
