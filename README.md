@@ -4,9 +4,9 @@ turkcell.com.tr/blog ve alt yazılarının tarama, indexleme, içerik, teknik SE
 
 - **Rapor:** [`index.html`](index.html) · tek dosya, dış bağımlılık yok
 - **Ölçüm penceresi:** 24 Temmuz - 20 Ağustos 2026
-- **Trend serisi:** 1 Eylül 2025 - 20 Ağustos 2026
+- **Trend serisi:** 5 Ocak - 20 Ağustos 2026 (adresin arama görünürlüğü bu tarihte başlamaktadır)
 - **Aylık sayfa verisi:** Mart - Ağustos 2026
-- **Kapsam:** 196 blog yazısı
+- **Kapsam:** yalnızca `www.turkcell.com.tr/blog` ve alt sayfaları · 196 yazı · alt alan adları (gelecegiyazanlar, lms, pasajblog) kapsam dışıdır
 - **Rapor tarihi:** 24 Ağustos 2026
 
 ## Bölümler
