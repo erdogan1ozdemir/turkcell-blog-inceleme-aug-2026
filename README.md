@@ -18,15 +18,16 @@ turkcell.com.tr/blog ve alt yazılarının tarama, indexleme, içerik, teknik SE
 | **İçerik** | 03 | Mevcut ve yeni içerik |
 | | 04 | İki üretim kaynağı |
 | | 05 | Kopya ve yapay zeka denetimi |
-| **Teknik** | 06 | Sitemap ve yönlendirmeler |
-| | 07 | Tarama ve indexleme |
-| | 08 | 5G canonical kararı |
-| | 09 | Teknik SEO ve sayfa hızı |
-| **Otorite** | 10 | Otorite ve E-E-A-T |
-| | 11 | Dış algı ve bahsedilme |
-| **Sonuç** | 12 | Önceliklendirilmiş aksiyon planı |
-| **Ek** | 13 | Tüm yazılar (196) |
-| | 14 | Yöntem ve terim sözlüğü |
+| **Rakip** | 06 | Rakip incelemesi |
+| **Teknik** | 07 | Sitemap ve yönlendirmeler |
+| | 08 | Tarama ve indexleme |
+| | 09 | 5G canonical kararı |
+| | 10 | Teknik SEO ve sayfa hızı |
+| **Otorite** | 11 | Otorite ve E-E-A-T |
+| | 12 | Dış algı ve bahsedilme |
+| **Sonuç** | 13 | Önceliklendirilmiş aksiyon planı |
+| **Ek** | 14 | Tüm yazılar (196) |
+| | 15 | Yöntem ve terim sözlüğü |
 
 ## Etkileşim
 
