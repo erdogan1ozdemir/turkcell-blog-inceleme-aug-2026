@@ -886,7 +886,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer;width:auto
           <th data-sort="num" class="num">LP <span class="arr">↕</span></th>
           <th data-sort="num" class="num">Click <span class="arr">↕</span></th>
           <th data-sort="num" class="num">Impression <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Ort. pozisyon <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">GSC ort. pozisyon <span class="arr">↕</span></th>
           <th data-sort="num" class="num">CTR <span class="arr">↕</span></th>
           <th data-sort="str">Sonuç sayfasındaki başlıca rakip <span class="arr">↕</span></th>
         </tr></thead>
@@ -919,12 +919,12 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer;width:auto
           <th data-sort="str">Küme <span class="arr">↕</span></th>
           <th data-sort="str">Turkcell yazısı <span class="arr">↕</span></th>
           <th data-sort="num" class="num">Aylık hacim <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Turkcell poz. <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Turkcell trafik <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Vodafone poz. <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Vodafone trafik <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Türk Telekom poz. <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Türk Telekom trafik <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">Turkcell Ahrefs poz. <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">Turkcell Ahrefs trafik <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">Vodafone Ahrefs poz. <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">Vodafone Ahrefs trafik <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">Türk Telekom Ahrefs poz. <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">Türk Telekom Ahrefs trafik <span class="arr">↕</span></th>
           <th data-sort="str" class="ctr">Durum <span class="arr">↕</span></th>
         </tr></thead>
         <tbody id="tbLpkw"></tbody>
@@ -967,8 +967,8 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer;width:auto
       <table id="tblKayip">
         <thead><tr>
           <th data-sort="str">Sorgu <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Turkcell poz. <span class="arr">↕</span></th>
-          <th data-sort="num" class="num">Turkcell trafik <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">Turkcell Ahrefs poz. <span class="arr">↕</span></th>
+          <th data-sort="num" class="num">Turkcell Ahrefs trafik <span class="arr">↕</span></th>
           <th data-sort="str">İlk üç sıradaki rakipler ve trafikleri <span class="arr">↕</span></th>
           <th data-sort="str">Baskın sayfa türü <span class="arr">↕</span></th>
         </tr></thead>
@@ -995,11 +995,11 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer;width:auto
     </div>
     <div class="table-wrap">
       <table id="tblSerp">
-        <thead><tr><th data-sort="str">Adres <span class="arr">↕</span></th><th data-sort="num" class="num">Organik pozisyon <span class="arr">↕</span></th><th data-sort="num" class="num">Ahrefs aylık trafik <span class="arr">↕</span></th><th data-sort="str">AI Overview <span class="arr">↕</span></th></tr></thead>
+        <thead><tr><th data-sort="str">Adres <span class="arr">↕</span></th><th data-sort="num" class="num">Ahrefs organik pozisyon <span class="arr">↕</span></th><th data-sort="num" class="num">Ahrefs aylık trafik <span class="arr">↕</span></th><th data-sort="str">AI Overview <span class="arr">↕</span></th></tr></thead>
         <tbody id="tbSerp"></tbody>
       </table>
     </div>
-    <div class="srcline"><b>Kaynak:</b> Ahrefs sonuç sayfası taraması, TR, 23-25 Ağu 2026. Trafik değeri sayfanın tüm keyword'lerinden aldığı tahmini aylık organik trafiktir, yalnızca bu sorgudan geleni göstermez. AI Overview sütunu, adresin o sorgunun AI Overview kaynakları arasında yer alıp almadığını göstermektedir. Turkcell satırlarında Ahrefs değerinin yanına <b>GSC click</b> eklenmiştir; bu değer yazının yayın tarihinden sonra tam veri bulunan ayların aylık ortalamasıdır ve üzerine gelindiğinde hangi ayların kullanıldığı görülebilir. <span class="slug">mbps nedir</span> ve <span class="slug">router nedir</span> sorgularında Ahrefs sıralamayı bölüm düzeyindeki bir adrese atfettiğinden, Ahrefs sütununda yazının kendi sayfa trafiği gösterilmiştir.</div>
+    <div class="srcline"><b>Kaynak:</b> Ahrefs sonuç sayfası taraması, TR, 23-25 Ağu 2026. Pozisyon, Ahrefs'in ilgili tarihteki sonuç sayfası görüntüsünde kaydettiği organik sıradır; GSC ortalama pozisyonundan farklıdır. Trafik değeri sayfanın tüm keyword'lerinden aldığı tahmini aylık organik trafiktir, yalnızca bu sorgudan geleni göstermez. AI Overview sütunu, adresin o sorgunun AI Overview kaynakları arasında yer alıp almadığını göstermektedir. Turkcell satırlarında Ahrefs değerinin yanına <b>GSC click</b> eklenmiştir; bu değer yazının yayın tarihinden sonra tam veri bulunan ayların aylık ortalamasıdır ve üzerine gelindiğinde hangi ayların kullanıldığı görülebilir. <span class="slug">mbps nedir</span> ve <span class="slug">router nedir</span> sorgularında Ahrefs sıralamayı bölüm düzeyindeki bir adrese atfettiğinden, Ahrefs sütununda yazının kendi sayfa trafiği gösterilmiştir.</div>
 
     <div class="insight">
       <span class="ar">➔</span> Sorgu bazında tablo tek yönlü değildir. <span class="key">hotspot nedir</span> sorgusunda Turkcell 3. sırada ve sayfası Türk Telekom'un <span class="n">2.4</span>, Vodafone'un <span class="n">2.9</span> katı trafik almaktadır. <span class="key">claude ai</span> sorgusunda Turkcell 3. sıradadır ve önündeki iki sonuç ürünün kendi adresleridir. Buna karşılık <span class="key">nfc nedir</span> sorgusunda ilk beş sırayı bankalar ve cihaz üreticisi almakta, Turkcell 8. sırada kalmaktadır.
@@ -1052,7 +1052,7 @@ select.f{font-family:inherit;background:var(--surface);cursor:pointer;width:auto
     </div>
     <div class="table-wrap">
       <table id="tblTop">
-        <thead><tr><th>Sayfa</th><th>Ana keyword</th><th class="num">Aylık hacim</th><th class="num">Pozisyon</th><th class="num">Ahrefs trafik</th><th class="num">Sıralanan keyword</th></tr></thead>
+        <thead><tr><th>Sayfa</th><th>Ana keyword</th><th class="num">Aylık hacim</th><th class="num">Ahrefs pozisyon</th><th class="num">Ahrefs trafik</th><th class="num">Sıralanan keyword</th></tr></thead>
         <tbody id="tbTop"></tbody>
       </table>
     </div>
@@ -2321,7 +2321,7 @@ document.getElementById('tbSignal').innerHTML=SIGNALS.map(r=>
     const c=QD[k];
     document.getElementById('qDesc').textContent=c.d;
     document.getElementById('thQ').innerHTML='<tr>'+c.h.map((x,i)=>
-      `<th data-sort="${i>2?'num':'str'}"${i>2?' class="num"':''}>${x} ${arr}</th>`).join('')+'</tr>';
+      `<th data-sort="${i>2?'num':'str'}"${i>2?' class="num"':''}>${x==='Pozisyon'?'GSC pozisyon':x} ${arr}</th>`).join('')+'</tr>';
     document.getElementById('tbQ').innerHTML=RK[k].map(r=>'<tr>'+c.f(r)+'</tr>').join('');
     if(typeof markSlugCells==='function')markSlugCells(document.getElementById('tblQ'));
     bindSort();
