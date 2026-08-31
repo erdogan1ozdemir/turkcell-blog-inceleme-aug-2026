@@ -180,6 +180,7 @@ table.t-slug{min-width:720px}
 .term{border-bottom:1.5px dotted var(--blue);cursor:help}
 .chtip{position:fixed;z-index:9998;background:var(--navy-deep);color:#fff;font-size:.8rem;line-height:1.5;padding:10px 13px;border-radius:10px;box-shadow:var(--shadow-pop);opacity:0;pointer-events:none;transition:opacity .1s;white-space:nowrap}
 .chtip.show{opacity:1}
+.chtip.wrap{white-space:normal;width:320px;max-width:calc(100vw - 24px)}
 .chtip .t{font-weight:800;display:block;margin-bottom:4px;color:var(--yellow);font-size:.76rem;letter-spacing:.03em}
 .chtip .r{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .chtip .r i{width:9px;height:9px;border-radius:2px;display:inline-block;margin-right:6px}
@@ -1684,7 +1685,17 @@ function showCh(html,x,y){chtip.innerHTML=html;chtip.classList.add('show');
   const w=chtip.offsetWidth,h=chtip.offsetHeight;
   chtip.style.left=Math.max(8,Math.min(x-w/2,innerWidth-w-8))+'px';
   chtip.style.top=(y-h-14<8?y+18:y-h-14)+'px';}
-function hideCh(){chtip.classList.remove('show');}
+function hideCh(){chtip.classList.remove('show');chtip.classList.remove('wrap');}
+/* GSC değerleri: grafiklerle aynı tooltip mekanizması */
+(function(){let cur=null;
+  const bul=t=>(t&&t.closest)?t.closest('.gsc'):null;
+  document.addEventListener('mousemove',e=>{
+    const g=bul(e.target);
+    if(g){const tip=g.getAttribute('data-tip');
+      if(tip){chtip.classList.add('wrap');showCh('<span class="t">GSC CLICK</span>'+tip,e.clientX,e.clientY);cur=g;return;}}
+    if(cur){hideCh();cur=null;}});
+  document.addEventListener('scroll',()=>{if(cur){hideCh();cur=null;}},true);
+})();
 addEventListener('scroll',hideCh,{passive:true});
 
 /* ---------- terim tooltip ---------- */
@@ -2346,7 +2357,7 @@ document.getElementById('tbSignal').innerHTML=SIGNALS.map(r=>
       const mine=/turkcell\.com\.tr/.test(r[0]);
       const ah=r[2]==null?'-':fmt(r[2]);
       const val=(mine&&r[4]!=null)
-        ? `<span class="dual">${ah}<span class="dual__sep">·</span><span class="gsc" title="${esc(r[5]||'')}">GSC ${fmt(r[4])}</span></span>`
+        ? `<span class="dual">${ah}<span class="dual__sep">·</span><span class="gsc" data-tip="${esc(r[5]||'')}">GSC ${fmt(r[4])}</span></span>`
         : ah;
       return tr(`<td><a href="${esc(r[0])}" target="_blank" rel="noopener"><span class="slug">${esc(shortU(r[0]))}</span></a>`
         +`<a class="go" href="${esc(r[0])}" target="_blank" rel="noopener">↗</a></td>`
@@ -2362,7 +2373,7 @@ document.getElementById('tbSignal').innerHTML=SIGNALS.map(r=>
   tsel.value='Türk Telekom';
   const drawTop=()=>{document.getElementById('tbTop').innerHTML=RK.TOPP[tsel.value].map(r=>{
     const val=(r[6]!=null)
-      ? `<span class="dual">${fmt(r[4])}<span class="dual__sep">·</span><span class="gsc" title="${esc(r[7]||'')}">GSC ${fmt(r[6])}</span></span>`
+      ? `<span class="dual">${fmt(r[4])}<span class="dual__sep">·</span><span class="gsc" data-tip="${esc(r[7]||'')}">GSC ${fmt(r[6])}</span></span>`
       : fmt(r[4]);
     return `<tr><td>${esc(r[0])}</td><td><span class="slug">${esc(r[1])}</span></td><td class="num">${fmt(r[2])}</td>`
     +`<td class="num">${r[3]}</td><td class="num">${val}</td><td class="num"><b>${fmt(r[5])}</b></td></tr>`;}).join('');
